@@ -12,7 +12,7 @@ const Manager = () => {
     // step45: now we make this function as async as we want to use "await" inside this function below.
     const getPasswords = async () =>{
         // step46: we make a GET request to the server using the fetch API
-        let req = await fetch("https://pass-mern-backend.onrender.com:3000")
+        let req = await fetch("https://pass-mern-backend.onrender.com")
         // step47: then we wait for response and then parses it to JSON , because : The fetch() function returns a Response object , so we need to convert it to JSON object now here : so we do this to transform the raw HTTP response into usable JS data ; and since it returns a promise , which we parse to JSON ; so as usual we await for promises , so here also we await for it , to wait until all data is retrieved successfully from there.
         let passwords = await req.json()
         // step48: then we update the passwordArray with the array of objects returned from the backend server
@@ -80,7 +80,7 @@ const Manager = () => {
         // step79: so using the deletion code we used in deletePassword function , we delete that form.id first  below ; where we sent the form.id as the "id" to be deleted in the delete function there in DELETE API of the Backend server there.
 
         // step81: also we can assign it like "let deleteRes" and not "let res" as its already being used in this funciton for the POST request below it ; so we may or may not do "let deleteRes" here : If we don’t need to check response, we can skip assigning; otherwise assign and handle errors like we did earlier in server4.js commented there to do like "if(!deleteRes.ok)" and all : ITS OPTIONAL.
-        await fetch("https://pass-mern-backend.onrender.com:3000" , {method:"DELETE" , headers :{"Content-Type" : "application/json"} , body : JSON.stringify( {id : form.id}) })
+        await fetch("https://pass-mern-backend.onrender.com" , {method:"DELETE" , headers :{"Content-Type" : "application/json"} , body : JSON.stringify( {id : form.id}) })
 
         // step80: after that when we click on save , the code of normal save happens and the editted password gets added there : SO OUR NEW UPADATED PASSWORD GETS ADDED AS A NEW FRESH ENTRY IN THE TABLE , AFTER THE PREVIOUS ONE WHOM WE WANTED TO EDIT GOT DELETED BY THE CODE WRITTEN ABOVE.
 
@@ -103,7 +103,7 @@ const Manager = () => {
         // step58: JSON.stringify was done because : we cannot send objects in HTTP requests , but a string only ; and later seeing the header below , the server's body-parser parses it back to JSON to send in the req.body there.
 
         // step59: so what happens here is that : the POST API made in backend had code : const password = req.body;  Express parses JSON body automatically (with body-parser) & then using the code there : const findResult = await collection.insertOne(password); Inserts the password object into MongoDB database & then the server sends back the response of success: true and all written in the POST API in the backend folder there.
-        let res = await fetch("https://pass-mern-backend.onrender.com:3000" , {method:"POST" , headers :{"Content-Type" : "application/json"} , body : JSON.stringify({...form , id : uuidv4() }) })
+        let res = await fetch("https://pass-mern-backend.onrender.com" , {method:"POST" , headers :{"Content-Type" : "application/json"} , body : JSON.stringify({...form , id : uuidv4() }) })
 
         setform({ site: "", username: "", password: "" });
     }
@@ -157,7 +157,7 @@ const Manager = () => {
             // step73: we write the same code below as we wrote in savePassword ; but now method: DELETE ; so that it triggers the DELETE API in the backend file now.
 
             // step74: we have sent only the "id" passed as argument in this function i.e. the id of the form that was geenerated by uuid earlier : and we have also editted the delete API in server4.js file : so it now deletes the document that has this "id" there now.
-            let res = await fetch("https://pass-mern-backend.onrender.com:3000" , {method:"DELETE" , headers :{"Content-Type" : "application/json"} , body : JSON.stringify( {id}) })
+            let res = await fetch("https://pass-mern-backend.onrender.com" , {method:"DELETE" , headers :{"Content-Type" : "application/json"} , body : JSON.stringify( {id}) })
 
             // step UNKNOWN_😁 : added line for error log if any : seen this syntax to be put in server4.js file there when we updated the DELETE API there.
             if(!res.ok){
