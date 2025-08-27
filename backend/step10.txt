@@ -1,0 +1,3 @@
+We now go on documentation of "npm mongodb" and do -
+
+npm install mongodb > then : copy codes in the server.js in the next step there.

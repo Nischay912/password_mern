@@ -1,0 +1,8 @@
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-password-toggle-button {
+  display: none;
+}

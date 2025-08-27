@@ -1,0 +1,5 @@
+We ran in terminal : npm init -y > npm i express > create server.js file and then > node --watch server.js.
+
+NOTE : we now no need to use nodemon as using "--watch" does the same work as it did ; to keep updating and restarting the server continuously as we make changes in its code there.
+
+So, we used --watch and now go to "server.js" file to see ntes there now in the form of commnets there.
