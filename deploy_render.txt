@@ -1,0 +1,1 @@
+We went on render.com > connected to github > before that make sure to set up mongodb_uri in env file and then > for backend i did : deploy web service and then : i did > build command : npm install > then i did > start command : node server4.js & root directory as > backend > choose free plan adn deploy after setting up the environment variables there.
