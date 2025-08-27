@@ -1,4 +1,4 @@
-# Password Manager
+# 🔐Password Manager
 
 A modern, responsive password manager application designed to help users securely store and manage their credentials. Built with **React** and **Tailwind CSS**, this project features a cloud-based database, offering and secure data management.
 
