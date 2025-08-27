@@ -1,1 +1,11 @@
-We went on render.com > connected to github > before that make sure to set up mongodb_uri in env file and then > for backend i did : deploy web service and then : i did > build command : npm install > then i did > start command : node server4.js & root directory as > backend > choose free plan adn deploy after setting up the environment variables there.
+We went on render.com > connected to github > before that make sure to set up mongodb_uri in env file and then > for backend i did : deploy web service and then : i did > build command : npm install > then i did > start command : node server4.js & root directory as > backend > choose free plan and deploy after setting up the environment variables there > ENSURE THAT YOU HAVE MADE PROCESS.ENV.PORT || 3000 IN THE SERVER4.JS FILE AND THEN WE NOW MAKE THE env VARIABLE AS MONGODB_URI CONTAINING THE CONNECTION STRING OF MONGODB ATLAS WITH THE MONGODB COMPASS THERE.
+
+AFTER THAT DEPLOY THE NACKEND IN WEB SERVICES AND THEN READY TO GO AND THEN DEPLOY THE BACKEND WITH THE ENV SET THERE TOO.
+
+COPY THE BACKEND LINK AND THEN GO ON github and PUT ALL THE LOCALHOST:3000 WITH THAT BACKEND LINK NOW THERE.
+
+NOW GO ON render AND CLICK ON NEW AND NOW DEPLOY THE FRONTEND BY CREATING A STATIC SITE NOW ; SO FOR THAT WE NOW CLICK ON DEPLOY STATIC SITE NOW AND THEN ENTER NAME AS PASS_MERN_FRONTEND AND THEN IN ROOT directory ENTER : FORNTEND FOLDER NAME "frontend" : AS WE HAVE SAVED ALL FRONTEDN FILES IN ONE FOLDER ADN ALL BACKEND IN ONE : SO NOW WE CAN ENTER IN build command as : npm install ; npm run build > and in publish directory : "./dist" > DEPLOY
+
+NOW can go in redirect/rewrites and enter : "/*" in source and "/index.html" in destination > click on redirect in drop down ans save : so that on redirecting or refreshing the page it doesnt show any error there.
+
+COPY and use the frontend url it generated there for us now.

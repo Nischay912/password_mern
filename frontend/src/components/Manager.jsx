@@ -18,7 +18,7 @@ const Manager = () => {
         // step48: then we update the passwordArray with the array of objects returned from the backend server
         setpasswordArray(passwords)
         // step49: log to console for debugging and seeing the passwords fetched for verification : WILL COMMENT THIS LATER.
-        console.log(passwords)
+        // console.log(passwords)
         // step50: still error was coming as CORS was not used : cors is always needed when the frontend and backend are working on different ports : Your frontend and backend are on different origins (ports), so you need CORS to let frontend access backend data. So, lets enable CORS in the backedn folder in the next ateps now there.
 
         // step53: after that now when we refresh the page : we can see the data from backend mongoDB to be displayed there & even in the console since we logged it on console too above : WE MAY SEE IT TWICE IN CONSOLE DUE TO THE : STRICT MODE OF THE REACT APP BY RULE : BUT IT DOESN'T DO THINGS TWICE IN PRODUCTION WHEN HOSTED : ITS JUST FOR SAFETY CROSS CHECK TWICE WHEN DOING DEVLEOPMENT ONLY THERE/HERE.
@@ -127,7 +127,7 @@ const Manager = () => {
     }
 
     const editPassword = (id) => {
-        console.log("Editting password of id" + id)
+        // console.log("Editting password of id" + id)
 
         // setform(passwordArray.filter((item) => item.id === id)[0])
         // const updatedArray = passwordArray.filter((item) => item.id !== id)
@@ -144,7 +144,7 @@ const Manager = () => {
 
     // step60: we updated the DELETE API first in server4.js there in backend , so see the next steps there first.
     const deletePassword = async(id) => {
-        console.log("Deleting password of id" + id)
+        // console.log("Deleting password of id" + id)
         let c = confirm("Are you sure to delete this password ?")
         if (c) {
             const updatedArray = passwordArray.filter((item) => item.id !== id)
